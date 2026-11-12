@@ -3,143 +3,513 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farel Portfolio</title>
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- CSS -->
-  <link rel="stylesheet" href="Landingpage.css">
+  <title>Farel Assadida — Frontend &amp; Mobile Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Landingpage.css" />
 </head>
-
 <body>
-<!-- PARTICLES BACKGROUND -->
-<div id="particles-js"></div>
-<!-- HERO -->
-<header class="hero d-flex align-items-center justify-content-center text-center">
-  <div class="hero-content">
-    <!-- FOTO (1 aja, konsisten) -->
-    <div class="profile-wrapper fade-up">
-      <img src="assets/Profil-Picture.png" alt="Foto Muhammad Farel Assadida" class="profile-img">
+  <!-- TOP NAVIGATION -->
+  <header class="site-header" id="top-nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand-spacer" aria-label="Farel Assadida Home"></a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#project" class="nav-link">Project</a></li>
+          <li><a href="#testimonials" class="nav-link" id="blogNavLink">Blog</a></li>
+        </ul>
+        <a href="#contact" class="btn-contact-nav">Contact Me</a>
+      </nav>
     </div>
-    <h1 class="fw-bold fade-up delay-1">Muhammad Farel Assadida</h1>
-    <h4 class="text-gradient typing fade-up delay-2"></h4>
-    <p class="tagline fade-up delay-3">
-      Building clean, modern, and scalable web experiences.
-    </p>
-    <a href="#contact" class="btn btn-glow mt-3 fade-up delay-4">
-      Contact Me
-    </a>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-greeting">Hello Buds</p>
+          <h1 class="hero-title">
+            I am <span class="text-primary-blue">Farel Assadida</span>
+          </h1>
+          <p class="hero-role">Frontend &amp; Mobile Developer Enthusiast</p>
+          <div class="hero-divider" aria-hidden="true"></div>
+          <p class="hero-bio">
+            I craft intuitive interfaces and scalable applications with a sharp eye for layout,
+            hierarchy, and micro-interactions. Blending clean visual design with solid frontend
+            engineering, I build dynamic web and mobile experiences that elevate product branding
+            and user engagement.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn-primary" id="downloadCvBtn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-2 15l-4-4h2.5V9h3v4H16l-4 4zm1-10V3.5L18.5 9H13z"/>
+              </svg>
+              <span>Download CV</span>
+            </button>
+            <a href="#about" class="btn-outline">More</a>
+          </div>
+        </div>
+
+        <div class="hero-visual-col">
+          <div class="hero-portrait-stage">
+            <div class="hero-backdrop-circle" aria-hidden="true"></div>
+
+            <!-- Organic Blue Gradient Blob from Figma Bezier Geometry -->
+            <svg class="hero-blob-svg" viewBox="0 0 365 550" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="heroBlobGrad" x1="15" y1="40" x2="310" y2="490" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#4A7AFF" />
+                  <stop offset="100%" stop-color="#2E00FF" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M29.413 21.464C60.972 1.905 202.85 22.429 316.402 91.659C429.954 160.889 304.68 241.747 304.68 389.612C304.68 537.478 7.764 389.613 2.49 224.165C-2.783 58.717 -2.145 41.024 29.413 21.464Z"
+                fill="url(#heroBlobGrad)"
+                fill-opacity="0.95"
+              />
+            </svg>
+
+            <!-- Top-right 3D dark sphere -->
+            <div class="hero-sphere" aria-hidden="true"></div>
+            <!-- Small floating accents -->
+            <span class="accent-plus hero-plus" aria-hidden="true">+</span>
+            <span class="accent-ring hero-ring" aria-hidden="true"></span>
+
+            <!-- User's Profile Photo from assets/ -->
+            <div class="hero-photo-pill">
+              <img src="assets/Profil-Picture.png" alt="Muhammad Farel Assadida" class="hero-photo" />
+            </div>
+          </div>
+
+          <div class="hero-social-row">
+            <span class="social-label">Find Me On</span>
+            <div class="social-icons">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.5 1.6-1.5H16.8V4.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V11H7.4v3h2.7v8h3.4z"/>
+                </svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+              </a>
+              <a href="https://wa.me/6285600022221" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.77 14.08c-.24.67-1.38 1.29-1.91 1.37-.49.07-1.12.1-1.8-.11-.42-.13-.95-.31-1.64-.61-2.89-1.25-4.78-4.16-4.92-4.35-.14-.19-1.18-1.57-1.18-2.99 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.77-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.82 2 .9 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.61.17.3.76 1.26 1.64 2.04 1.13 1.01 2.08 1.32 2.38 1.47.3.15.47.12.65-.07.18-.19.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.34.07.12.07.7-.17 1.37z"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com/in/muhammad-farel-assadida/" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M6.94 8.5H3.56V19.5H6.94V8.5ZM5.25 3.5C4.14 3.5 3.25 4.39 3.25 5.5C3.25 6.6 4.14 7.5 5.25 7.5C6.35 7.5 7.25 6.6 7.25 5.5C7.25 4.39 6.35 3.5 5.25 3.5ZM20.44 13.02C20.44 9.88 18.76 8.22 16.16 8.22C14.37 8.22 13.48 9.2 13.02 9.93V8.5H9.65C9.7 9.48 9.65 19.5 9.65 19.5H13.02V13.36C13.02 13.02 13.05 12.69 13.15 12.45C13.42 11.78 14.03 11.09 15.07 11.09C16.41 11.09 17.06 12.11 17.06 13.6V19.5H20.44V13.02Z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION (WHAT DO I OFFER) -->
+    <section class="services-section" id="about">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <p class="section-eyebrow">What Do I Offer</p>
+          <h2 class="section-title">
+            Creating Purpose-Driven<br />
+            Digital Solutions Tailored to User Needs
+          </h2>
+        </div>
+
+        <div class="service-frame reveal">
+          <div class="service-top-indicator" id="serviceTopIndicator" data-active="1" aria-hidden="true"></div>
+          <div class="service-cards" id="serviceCards">
+            <article class="service-card" data-index="0" tabindex="0" role="button" aria-label="Administration service">
+              <div class="service-icon-wrap">
+                <img src="assets/service-admin.png" alt="Administration 3D illustration" />
+              </div>
+              <h3 class="service-name">Administration</h3>
+            </article>
+
+            <article class="service-card is-active" data-index="1" tabindex="0" role="button" aria-label="Mobile App Design service">
+              <div class="service-icon-wrap">
+                <img src="assets/service-mobile.png" alt="Mobile App Design 3D illustration" />
+              </div>
+              <h3 class="service-name">Mobile App Design</h3>
+            </article>
+
+            <article class="service-card" data-index="2" tabindex="0" role="button" aria-label="Web Design service">
+              <div class="service-icon-wrap">
+                <img src="assets/service-web.png" alt="Web Design 3D illustration" />
+              </div>
+              <h3 class="service-name">Web Design</h3>
+            </article>
+          </div>
+        </div>
+
+        <div class="service-pagination" aria-label="Service slide controls">
+          <button type="button" class="pager-arrow" id="servicePrev" aria-label="Previous service">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+          </button>
+          <div class="pager-bars" id="serviceBars">
+            <button type="button" class="pager-bar" data-index="0" aria-label="Select Administration"></button>
+            <button type="button" class="pager-bar is-active" data-index="1" aria-label="Select Mobile App Design"></button>
+            <button type="button" class="pager-bar" data-index="2" aria-label="Select Web Design"></button>
+          </div>
+          <button type="button" class="pager-arrow" id="serviceNext" aria-label="Next service">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BANNER -->
+    <section class="stats-section" aria-label="Experience and project highlights">
+      <div class="stats-bg-layer" aria-hidden="true"></div>
+      <div class="container stats-inner">
+        <div class="stats-grid reveal" id="statsGrid">
+          <div class="stat-card" data-stat="0">
+            <span class="stat-value">01</span>
+            <span class="stat-label">Clients Order</span>
+          </div>
+          <div class="stat-card is-featured" data-stat="1">
+            <span class="stat-value">03</span>
+            <span class="stat-label">Completed Projects</span>
+          </div>
+          <div class="stat-card" data-stat="2">
+            <span class="stat-value">4.5</span>
+            <span class="stat-label">Stars Rating</span>
+          </div>
+          <div class="stat-card" data-stat="3">
+            <span class="stat-value">06</span>
+            <span class="stat-label">Months Of Experience</span>
+          </div>
+        </div>
+
+        <div class="stats-bars" aria-hidden="true">
+          <span class="stat-bar"></span>
+          <span class="stat-bar is-active"></span>
+          <span class="stat-bar"></span>
+          <span class="stat-bar"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST PROJECT SECTION -->
+    <section class="projects-section" id="project">
+      <div class="container">
+        <div class="section-header watermark-header centered reveal">
+          <span class="watermark-text" aria-hidden="true">MY PROJECT</span>
+          <h2 class="section-title">Latest Project</h2>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card reveal">
+            <div class="project-thumb">
+              <img src="assets/project-kembang-jaya-pos.png" alt="Kembang Jaya POS mobile application mockup" />
+            </div>
+            <h3 class="project-title title-magenta">Kembang Jaya POS</h3>
+            <button type="button" class="btn-primary btn-view-details" data-project="pos">View Details</button>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-thumb">
+              <img src="assets/project-landing-page-kembang-jaya.png" alt="Landing Page Kembang Jaya responsive mockup" />
+            </div>
+            <h3 class="project-title title-magenta">Landing Page Kembang Jaya</h3>
+            <button type="button" class="btn-primary btn-view-details" data-project="landing">View Details</button>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-thumb">
+              <img src="assets/project-budget-app.png" alt="Budget App Seventh System dashboard mockup" />
+            </div>
+            <h3 class="project-title title-emerald">Budget App</h3>
+            <button type="button" class="btn-primary btn-view-details" data-project="budget">View Details</button>
+          </article>
+        </div>
+
+        <!-- CTA BANNER -->
+        <div class="project-cta-box reveal">
+          <div class="cta-text">
+            <h3>Have any project in mind?</h3>
+            <p>I'm available for freelancing</p>
+          </div>
+          <div class="cta-actions">
+            <button type="button" class="btn-outline" id="moreProjectsBtn">More Projects</button>
+            <a href="mailto:mfarelassadida@gmail.com" class="btn-primary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <span>Email Me</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY HIRE ME SECTION -->
+    <section class="why-section" id="why-hire-me">
+      <div class="container">
+        <div class="section-header watermark-header centered reveal">
+          <span class="watermark-text" aria-hidden="true">WHY HIRE ME</span>
+          <h2 class="section-title">Why Hire Me</h2>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-item reveal">
+            <div class="why-badge-outer">
+              <div class="why-badge-inner">
+                <div class="why-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M10 4h4a2 2 0 0 1 2 2v1h4a1 1 0 0 1 1 1v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a1 1 0 0 1 1-1h4V6a2 2 0 0 1 2-2zm0 3h4V6h-4v1zm7.2 8.2a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zm-.45 4.45-1.3-1.3.7-.7.6.6 1.4-1.4.7.7-2.1 2.1z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <h3>Action-Driven</h3>
+            <p>
+              Constantly driven to build, optimize, and iterate on solutions with a strong sense
+              of ownership.
+            </p>
+          </article>
+
+          <article class="why-item reveal">
+            <div class="why-badge-outer">
+              <div class="why-badge-inner">
+                <div class="why-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2zm4 6v2h8v-2H8zm0 3.5v2h5v-2H8z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <h3>Clear Communicator</h3>
+            <p>
+              Articulating technical concepts effectively to bridge the gap between design,
+              engineering, and stakeholders.
+            </p>
+          </article>
+
+          <article class="why-item reveal">
+            <div class="why-badge-outer">
+              <div class="why-badge-inner">
+                <div class="why-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14zM4 22H2V11h2v11z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <h3>Collaborative</h3>
+            <p>
+              Thriving in agile team environments, aligning technical execution with shared
+              project goals.
+            </p>
+          </article>
+
+          <article class="why-item reveal">
+            <div class="why-badge-outer">
+              <div class="why-badge-inner">
+                <div class="why-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2l2.4 1.6 2.9-.2 1 2.7 2.5 1.5-.2 2.9L22 12l-1.4 2.5.2 2.9-2.5 1.5-1 2.7-2.9-.2L12 22l-2.4-1.6-2.9.2-1-2.7-2.5-1.5.2-2.9L2 12l1.4-2.5-.2-2.9 2.5-1.5 1-2.7 2.9.2L12 2zm-1.1 13.2l5-5-1.4-1.4-3.6 3.6-1.6-1.6-1.4 1.4 3 3z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <h3>Detail-Oriented</h3>
+            <p>
+              Committed to high-quality code and visual precision, delivering polished and reliable
+              digital products.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <p class="section-eyebrow">Testimonials</p>
+          <h2 class="section-title">What Do They Say About Me</h2>
+        </div>
+      </div>
+
+      <div class="testimonial-band">
+        <div class="container testimonial-container reveal">
+          <button type="button" class="testimonial-arrow arrow-left" id="testimonialPrev" aria-label="Previous testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+          </button>
+
+          <div class="testimonial-content">
+            <div class="testimonial-avatar-wrapper">
+              <div class="testimonial-photo-card">
+                <div class="testimonial-glow" aria-hidden="true"></div>
+                <span class="accent-plus testimonial-plus" aria-hidden="true">+</span>
+                <span class="accent-ring testimonial-ring" aria-hidden="true"></span>
+                <img src="assets/testimonial-setyo.png" alt="Setyo Nugroho" class="testimonial-photo" />
+              </div>
+              <div class="testimonial-dots" id="testimonialDots" aria-hidden="true">
+                <span class="t-dot is-active"></span>
+                <span class="t-dot"></span>
+                <span class="t-dot"></span>
+              </div>
+            </div>
+
+            <div class="testimonial-quote-block" id="testimonialQuoteBlock">
+              <blockquote class="testimonial-quote">
+                Aplikasi ini sangat membantu menggantikan pencatatan manual pulpen dan kertas yang
+                merepotkan saat ramai. Fitur perhitungan keuntungan mencegah kerugian akibat diskon
+                sembarangan sekaligus memudahkan alokasi uang modal belanja barang, ditambah bebas
+                biaya langganan bulanan.
+              </blockquote>
+              <p class="testimonial-author">Setyo Nugroho</p>
+              <p class="testimonial-role">Owner Depot Kayu Kembang Jaya</p>
+            </div>
+          </div>
+
+          <button type="button" class="testimonial-arrow arrow-right" id="testimonialNext" aria-label="Next testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS AND SKILLS SECTION -->
+    <section class="tools-section" id="skills">
+      <div class="container">
+        <div class="section-header watermark-header centered reveal">
+          <span class="watermark-text" aria-hidden="true">TOOLS AND SKILLS</span>
+          <h2 class="section-title">Tools and Skills</h2>
+        </div>
+
+        <div class="tools-grid reveal">
+          <div class="tool-card" title="Adobe Photoshop">
+            <img src="assets/tool-ps.png" alt="Adobe Photoshop" />
+            <div class="tool-shadow" aria-hidden="true"></div>
+          </div>
+          <div class="tool-card" title="Figma">
+            <img src="assets/tool-figma.png" alt="Figma" />
+            <div class="tool-shadow" aria-hidden="true"></div>
+          </div>
+          <div class="tool-card" title="HTML5">
+            <img src="assets/tool-html5.png" alt="HTML5" />
+            <div class="tool-shadow" aria-hidden="true"></div>
+          </div>
+          <div class="tool-card" title="CSS3">
+            <img src="assets/tool-css3.png" alt="CSS3" />
+            <div class="tool-shadow" aria-hidden="true"></div>
+          </div>
+          <div class="tool-card" title="XML">
+            <img src="assets/tool-xml.png" alt="XML" />
+            <div class="tool-shadow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER / GET IN TOUCH -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-wave-bg" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <div class="footer-info reveal">
+        <h2 class="footer-title">Get in Touch</h2>
+        <p class="footer-subtitle">For business and partnership inquiry please contact me below!</p>
+
+        <ul class="contact-list">
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </span>
+            <div class="contact-meta">
+              <span class="contact-label">Phone</span>
+              <a href="tel:085600022221" class="contact-value">0856 0002 2221</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-10 6L2 7"/>
+              </svg>
+            </span>
+            <div class="contact-meta">
+              <span class="contact-label">Email</span>
+              <a href="mailto:mfarelassadida@gmail.com" class="contact-value">mfarelassadida@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+            </span>
+            <div class="contact-meta">
+              <span class="contact-label">Address</span>
+              <span class="contact-value">Desa Langkap, Kecamatan Kedungwuni, Kabupaten Pekalongan</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Decorative Geometric SVG on Footer Right -->
+      <div class="footer-deco" aria-hidden="true">
+        <svg viewBox="0 0 150 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="24" r="6" stroke="#78A5FF" stroke-opacity="0.45" stroke-width="1.5"/>
+          <polygon points="22,52 38,44 35,62" stroke="#315BFF" stroke-width="1.6" fill="none"/>
+          <path d="M138 14C138 56 112 72 86 92C58 114 78 144 64 170C48 198 18 196 10 226" stroke="rgba(255,255,255,0.45)" stroke-width="1.4" stroke-dasharray="6 6" stroke-linecap="round"/>
+          <circle cx="64" cy="170" r="4.5" stroke="rgba(255,255,255,0.4)" stroke-width="1.4" fill="#101522"/>
+        </svg>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE MODAL (Project Details / CV Summary / Notices) -->
+  <div class="modal-backdrop" id="portfolioModal" hidden>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+      <div id="modalBody"></div>
+    </div>
   </div>
-</header>
 
-<!-- MAIN -->
-<main>
-  <!-- STORY -->
-  <section class="container py-5 story-section">
-    <h2 class="text-center reveal">My Journey</h2>
-    <div class="row mt-5 align-items-center">
-      <!-- TEXT -->
-      <div class="col-md-6 reveal">
-        <h4 class="text-gradient">From Curiosity to Commitment</h4>
-        <p class="mt-3">
-          I started my journey as an Informatics student curious about how websites are built.
-        </p>
-        <p>
-          Over time, I focused on web development, learning HTML, CSS, and JavaScript.
-        </p>
-        <p>
-          Now, I'm leveling up by learning modern frameworks and building scalable applications.
-        </p>
-      </div>
-      <!-- TIMELINE -->
-      <div class="col-md-6">
-        <div class="journey-grid">
-            <div class="journey-card reveal">
-                <h5>2023</h5>
-                <p>Started learning web development fundamentals</p>
-            </div>
-            <div class="journey-card reveal">
-                <h5>2024</h5>
-                <p>Mastered HTML, CSS, and JavaScript</p>
-            </div>
-            <div class="journey-card active-stage reveal">
-                <h5>Next</h5>
-                <p>Learning frameworks & building scalable projects</p>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-banner" id="toastBanner" role="status" aria-live="polite" hidden></div>
 
-  <!-- SKILLS -->
-    <section class="container text-center py-5">
-        <h2 class="reveal">Skills</h2>
-        <div class="skills-grid mt-4">
-            <div class="skill-box reveal">
-                <i class="bi bi-filetype-html"></i>
-                <p>HTML</p>
-            </div>
-
-            <div class="skill-box reveal">
-                <i class="bi bi-filetype-css"></i>
-                <p>CSS</p>
-            </div>
-
-            <div class="skill-box reveal">
-                <i class="bi bi-filetype-js"></i>
-                <p>JavaScript</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="container text-center py-5">
-        <h2 class="reveal">Other Tools</h2>
-        <div class="tools-grid mt-4">
-            <div class="tool-box reveal">
-                <i class="bi bi-github"></i>
-                <p>GitHub</p>
-            </div>
-            <div class="tool-box reveal">
-                <i class="bi bi-code-slash"></i>
-                <p>VS Code</p>
-            </div>
-            <div class="tool-box reveal">
-                <i class="bi bi-palette"></i>
-                <p>Canva</p>
-            </div>
-            <div class="tool-box reveal">
-                <i class="bi bi-robot"></i>
-                <p>ChatGPT</p>
-            </div>
-            <div class="tool-box reveal">
-                 <i class="bi bi-cpu"></i>
-                <p>Gemini</p>
-            </div>
-        </div>
-    </section>
-</main>
-
-<!-- CONTACT -->
-<footer id="contact" class="container text-center py-5">
-    <h2 class="reveal">Contact</h2>
-    <div class="contact-wrapper mt-4">
-        <a href="https://linkedin.com/in/muhammad-farel-assadida/" target="_blank" class="contact-link reveal">
-            <i class="bi bi-linkedin"></i>
-            <span>LinkedIn</span>
-        </a>
-        <a href="mailto:playergumilang1126@gmail.com" class="contact-link reveal">
-            <i class="bi bi-envelope-fill"></i>
-            <span>Email</span>
-        </a>
-    </div>
-</footer>
-
-<!-- JS -->
-<script src="Landingpage.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script src="particles-config.js"></script>
-
+  <script src="Landingpage.js"></script>
 </body>
 </html>
