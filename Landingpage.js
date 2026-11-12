@@ -168,6 +168,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tag: 'Mobile Application • UMKM POS',
       title: 'Kembang Jaya POS',
       image: 'assets/project-kembang-jaya-pos.png',
+      url: 'https://drive.google.com/file/d/1CnEsw_KLaFVYk3fG2fkNCZ_e5z5_g6zw/view?usp=sharing',
+      ctaLabel: 'Open Portfolio',
       description:
         'A digital point-of-sale and business recapitulation mobile app built for Depot Kayu Kembang Jaya to replace manual paper-and-pen bookkeeping during busy hours.',
       highlights: [
@@ -181,6 +183,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tag: 'Web Design & Frontend • Company Profile',
       title: 'Landing Page Kembang Jaya',
       image: 'assets/project-landing-page-kembang-jaya.png',
+      url: 'https://seventhe16.github.io/CodingCamp-220925-Muhammad_Farel_Assadida/',
+      ctaLabel: 'Visit Live Site',
       description:
         'A responsive web storefront and product catalog for Depot Kayu Kembang Jaya, showcasing construction timber grades, custom woodworking services, and instant inquiry actions.',
       highlights: [
@@ -193,6 +197,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tag: 'Web & Mobile UI • Financial Tracker',
       title: 'Budget App — Seventh System',
       image: 'assets/project-budget-app.png',
+      url: 'https://seventh-budget-ui.vercel.app/',
+      ctaLabel: 'Visit Live App',
       description:
         'A structured personal finance and expense analytics interface supporting weekly/daily budgeting, expense input, and visual spending distribution.',
       highlights: [
@@ -230,7 +236,15 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="modal-desc">${data.description}</p>
         <ul class="modal-highlights">${listItems}</ul>
         <div class="modal-actions">
-          <a href="mailto:mfarelassadida@gmail.com?subject=Inquiry%20regarding%20${encodeURIComponent(data.title)}" class="btn-primary">Discuss Similar Project</a>
+          <a href="${data.url}" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            <span>${data.ctaLabel}</span>
+          </a>
+          <a href="mailto:mfarelassadida@gmail.com?subject=Inquiry%20regarding%20${encodeURIComponent(data.title)}" class="btn-outline">Discuss Project</a>
           <button type="button" class="btn-outline" id="modalDismissBtn">Close</button>
         </div>
       `);
