@@ -257,33 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const downloadCvBtn = document.getElementById('downloadCvBtn');
   if (downloadCvBtn) {
     downloadCvBtn.addEventListener('click', () => {
-      openModal(`
-        <span class="modal-tag">Curriculum Vitae Overview</span>
-        <h3 class="modal-heading" id="modalTitle">Farel Assadida</h3>
-        <p class="modal-desc">
-          <strong>Role:</strong> Frontend &amp; Mobile Developer Enthusiast<br />
-          <strong>Core Tools:</strong> Adobe Photoshop, Figma, HTML5, CSS3, XML<br />
-          <strong>Services:</strong> Administration, Mobile App Design, Web Design<br />
-          <strong>Location:</strong> Desa Langkap, Kecamatan Kedungwuni, Kabupaten Pekalongan<br />
-          <strong>Contact:</strong> 0856 0002 2221 &bull; mfarelassadida@gmail.com
-        </p>
-        <ul class="modal-highlights">
-          <li>01 Clients Order &bull; 03 Completed Projects &bull; 4.5 Stars Rating &bull; 06 Months Of Experience</li>
-          <li>Featured Works: Kembang Jaya POS, Landing Page Kembang Jaya, Budget App</li>
-        </ul>
-        <div class="modal-actions">
-          <button type="button" class="btn-primary" id="printCvBtn">Save / Print as PDF</button>
-          <a href="mailto:mfarelassadida@gmail.com?subject=Request%20Full%20CV%20-%20Farel%20Assadida" class="btn-outline">Request PDF via Email</a>
-        </div>
-      `);
-
-      const printCvBtn = document.getElementById('printCvBtn');
-      if (printCvBtn) {
-        printCvBtn.addEventListener('click', () => {
-          closeModal();
-          window.print();
-        });
-      }
+      showToast('Downloading CV: Muhammad Farel Assadida');
     });
   }
 
